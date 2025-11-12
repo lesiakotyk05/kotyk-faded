@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вхід - FATED</title>
+    <title>Вхід — FATED</title>
+
+    <!-- Підключення стилів -->
     <link rel="stylesheet" href="auth.css">
+
+    <!-- Підключення шрифту -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
@@ -17,24 +21,25 @@
             <div class="logo-text">FATED</div>
         </div>
 
-        <div class="tab-switcher">
-            <button class="tab-button active">LOGIN</button>
-            <a href="register.html" class="tab-button">REGISTER</a>
+        <div class="auth-content">
+            <div class="tab-switcher">
+                <button type="button" class="tab-button active">LOGIN</button>
+                <a href="register.html" class="tab-button">REGISTER</a>
+            </div>
+
+            <form class="form-group" action="#" method="post">
+                <input type="text" class="text-input" placeholder="user name" required>
+                <input type="password" class="text-input" placeholder="password" required>
+
+                <a href="#" class="forgot-password">FORGOT PASSWORD?</a>
+
+                <button type="submit" class="main-form-button login-button">LOGIN</button>
+            </form>
+
+            <p class="already-account">
+                DON’T HAVE AN ACCOUNT? <a href="register.html">REGISTER</a>
+            </p>
         </div>
-
-        <form class="form-group">
-            <input type="text" class="text-input" placeholder="user name">
-            <input type="password" class="text-input" placeholder="password">
-
-            <a href="#" class="forgot-password">FORGOT PASSWORD?</a>
-
-            <button type="submit" class="main-form-button login-button">LOGIN</button>
-        </form>
-
-        <p class="already-account">
-            ALREADY HAVE AN ACCOUNT? <a href="register.html">REGISTER</a>
-        </p>
-
     </div>
 </body>
 
