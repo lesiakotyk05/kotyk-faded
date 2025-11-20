@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вхід — FATED</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Конфігурація Tailwind для використання Roboto та кастомних кольорів
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'fated-red': '#FF5F5F',
+                        'fated-text': '#32323C',
+                        'fated-placeholder': '#999999',
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                    },
+                    
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Зменшено вертикальний відступ для полів вводу, щоб вони займали менше місця */
+        .input-padding {
+            padding: 14px 20px;
+        }
+
+        /* Забезпечення центрованого тексту placeholder */
+        input::placeholder {
+            text-align: center !important;
+            text-transform: lowercase !important;
+        }
+
+        /* Забезпечення повної висоти */
+        .h-screen {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-fated-red text-white min-h-screen flex justify-center items-center font-sans p-0 m-0">
+
+    <div class="w-full max-w-md h-screen min-h-screen flex flex-col px-8 box-border text-center">
+
+        <div class="h-1/2 flex flex-col justify-center items-center flex-shrink-0">
+            <img src="image4.png" alt="Замок у формі серця" class="w-[18vw] max-w-[85px] h-auto mb-2 mx-auto">
+            <div class="text-white text-5xl font-bold tracking-widest uppercase">FATED</div>
+        </div>
+
+        <div class="h-1/2 flex flex-col justify-start pt-4">
+
+            <div class="flex justify-between gap-4 mb-4 flex-shrink-0">
+                <button type="button"
+                    class="flex-grow bg-white text-fated-red py-2 font-bold rounded-lg uppercase transition-colors text-xs shadow-none">
+                    LOGIN
+                </button>
+
+                <a href="register.html"
+                    class="flex-grow bg-white/10 text-white py-2 font-bold rounded-lg uppercase transition-colors text-xs shadow-none hover:bg-white/20 flex items-center justify-center">
+                    REGISTER
+                </a>
+            </div>
+
+            <form class="flex flex-col gap-4 w-full justify-center flex-shrink-0">
+                <input type="text" placeholder="user name" required
+                    class="w-full input-padding border-none rounded-lg text-sm text-fated-text font-medium focus:outline-none placeholder:text-fated-placeholder">
+                <input type="password" placeholder="password" required
+                    class="w-full input-padding border-none rounded-lg text-sm text-fated-text font-medium focus:outline-none placeholder:text-fated-placeholder">
+
+                <a href="#"
+                    class="text-white text-xs font-bold uppercase self-end no-underline flex-shrink-0 hover:underline">
+                    FORGOT PASSWORD?
+                </a>
+
+                <button type="submit"
+                    class="w-full py-3 border-none rounded-lg text-sm font-bold cursor-pointer uppercase transition-opacity bg-white text-fated-red shadow-none tracking-wider mt-4 hover:opacity-90">
+                    LOGIN
+                </button>
+            </form>
+
+            <p class="text-xs font-medium mt-3 pb-2 flex-shrink-0">
+                DON’T HAVE AN ACCOUNT?
+                <a href="register.html" class="text-white font-bold no-underline hover:underline">REGISTER</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
