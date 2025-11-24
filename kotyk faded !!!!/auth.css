@@ -236,7 +236,7 @@ body {
 }
 
 /* Адаптивність */
-@media (min-width: 421px) {
+@media (min-width: 280px) {
     body {
         align-items: center;
         justify-content: center;
